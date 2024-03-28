@@ -11,27 +11,35 @@
     <main class="picture-container">
 
         <!--each image, text number, and caption text-->
-            <section class="slide" id="image1">
+            <section class="slide">
                 <div class="numbertext">1 / 4</div>
-                <img src="images/250.jpg" alt="#">
+                <img src="images/250.jpg" alt="#"  id="image1">
             </section>
-            <section class="slide" id="image2">
+            <section class="slide" >
                 <div class="numbertext">2 / 4</div>
-                <img src="images/287.jpg" alt="#">
+                <img src="images/287.jpg" alt="#" id="image2">
             </section>
-            <section class="slide" id="image3">
+            <section class="slide" >
                 <div class="numbertext">3 / 4</div>
-                <img src="images/placeholder5.jpg" alt="#">
+                <img src="images/placeholder5.jpg" alt="#" id="image3">
             </section>
-            <section class="slide" id="image4">
+            <section class="slide" >
                 <div class="numbertext">4 / 4</div>
-                <img src="images/placeholder8.jpg" alt="#">
+                <img src="images/placeholder8.jpg" alt="#" id="image4">
             </section>
 
             <!--Next and previous buttons-->
             <a href="" class="prev">&#10094;</a> <!--that code number is just built into html-->
             <a href="" class="next">&#10095;</a>
+            <div class="navigation-button">
+                <!--The on click I'd like to change the code to javascript but it works so w.e-->
+                <span class="dot activate" onclick="changeSlide(0)">1</span>
+                <span class="dot" onclick="changeSlide(1)">2</span>
+                <span class="dot" onclick="changeSlide(2)">3</span>
+                <span class="dot" onclick="changeSlide(3)">4</span>
+            </div>
         </main>
+     
 </body>
     <script src="main.js"></script>
 </html>

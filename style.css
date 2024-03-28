@@ -4,15 +4,49 @@
     margin: 0;
 }
 
-img{
+
+/* Is the picture-container. The position is relative because... it needs a position for the children to go off of*/
+.picture-container{
+    position: relative;
     width: 30vw;
     height:30vh;
 }
 
-.slide{
-    display: none;
+/* The position is absolute so that it stays directly within the parent*/
+.picture-container img{
+    /* This get's the pictures to be layered on top of each other, and if left alone the last picture will be shown*/
+    position: absolute;
+    width: 30vw;
+    height:30vh;
+    top: 0;
+    left: 0;
 }
 
-#image1{
+.picture-container img:first-child{
+    /* Is what allows the pictures to be rotated from front to back*/
+    z-index: 1;
+}
+
+.picture-container img:nth-child(3){
+    z-index: 0;
+}
+
+/* The container for the dots*/
+.navigation-button{
+    text-align: center;
+    position: relative;
+}
+
+.dot{
+    cursor: pointer;
+    height: 1em;
+    width: 1em;
+    background-color: black;
     display: inline-block;
+    border-radius: 50%;
+    margin-top: 60%;
+}
+
+.dot:hover, .dot:active{
+    background-color: green;
 }
